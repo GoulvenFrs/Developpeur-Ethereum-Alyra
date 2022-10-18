@@ -13,7 +13,9 @@ In case of issue instaling, here are the commands I used to create the voting dA
     npm install --save-dev "hardhat@^2.12.0" "@nomicfoundation/hardhat-toolbox@^2.0.0" "ethers@^5.7.1"
     npm install @openzeppelin/contracts
 
-### `npx hardhat run scripts/deploy.js --network goerli`
+### For using hardhat
+
+ `npx hardhat run scripts/deploy.js --network goerli`
 
 ## Available Scripts
 
