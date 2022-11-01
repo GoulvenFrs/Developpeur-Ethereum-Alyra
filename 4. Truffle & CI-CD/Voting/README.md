@@ -113,6 +113,9 @@ context("setVote()", function () {...}
   - [x] Revert because sender isn't a registered voter
   - [x] Revert because vote id is invalid
   - [x] Revert because sender has already voted
+  - [x] Check the voter.hasVoted is true
+  - [x] Check the vote is well registered
+  - [x] Check the proposal receive the vote
   - [x] Should emit an event on setVote
 
 ---
@@ -127,13 +130,13 @@ context("setVote()", function () {...}
 |                                      |                           |                          |         |            |                          |           |
 | Contract                             | Method                    |           Min            |   Max   |        Avg |         # calls          | eur (avg) |
 |                                      |                           |                          |         |            |                          |           |
-| Voting                               | addProposal               |            -             |    -    |      58063 |            14            |     -     |
-| Voting                               | addVoter                  |            -             |    -    |      49619 |            23            |     -     |
-| Voting                               | endProposalsRegistering   |            -             |    -    |      30155 |            8             |     -     |
+| Voting                               | addProposal               |            -             |    -    |      58063 |            20            |     -     |
+| Voting                               | addVoter                  |            -             |    -    |      49619 |            29            |     -     |
+| Voting                               | endProposalsRegistering   |            -             |    -    |      30155 |            11            |     -     |
 | Voting                               | endVotingSession          |            -             |    -    |      30098 |            2             |     -     |
-| Voting                               | setVote                   |            -             |    -    |      77064 |            3             |     -     |
-| Voting                               | startProposalsRegistering |            -             |    -    |      94266 |            19            |     -     |
-| Voting                               | startVotingSession        |            -             |    -    |      30113 |            8             |     -     |
+| Voting                               | setVote                   |            -             |    -    |      77064 |            9             |     -     |
+| Voting                               | startProposalsRegistering |            -             |    -    |      94266 |            22            |     -     |
+| Voting                               | startVotingSession        |            -             |    -    |      30113 |            11            |     -     |
 | Voting                               | tallyVotes                |            -             |    -    |      37320 |            1             |     -     |
 | Deployments                                                      |                          |         |            |            % of limit    |           |
 | Voting                                                           |            -             |    -    |    1069040 |                15.9 %    |     -     |
