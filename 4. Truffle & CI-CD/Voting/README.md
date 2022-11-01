@@ -5,7 +5,7 @@
 Download the project workspace on your local machine.
 
 ```bash
-git clone https://github.com/adnane-t/Developpeur-Ethereum-Template.git
+git clone https://github.com/GoulvenPablo/Developpeur-Ethereum-Alyra.git
 cd Developpeur-Ethereum-Template/4.\ Truffle\ \&\ CI-CD/
 ```
 
