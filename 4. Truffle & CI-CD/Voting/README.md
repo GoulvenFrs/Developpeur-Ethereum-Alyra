@@ -10,10 +10,10 @@ cd Developpeur-Ethereum-Template/4.\ Truffle\ \&\ CI-CD/
 ```
 
 ```bash
-npm install @openzeppelin/contracts --save-dev
-npm install @openzeppelin/test-helpers --save-dev
-npm install @truffle/hdwalletprovider --save-dev
-npm install --save-dev eth-gas-reporter
+npm install @openzeppelin/contracts
+npm install @openzeppelin/test-helpers 
+npm install @truffle/hdwalletprovider 
+npm install eth-gas-reporter
 ```
 
 Depending on your local settings you might need to update the truffle.congi.js file in order to let your environment variable matching the project config.
@@ -112,7 +112,6 @@ context("setVote()", function () {...}
   - [x] Revert because workflowStatus isn't VotingSessionStarted
   - [x] Revert because sender isn't a registered voter
   - [x] Revert because vote id is invalid
-  - [x] Revert because sender has already voted
   - [x] Revert because sender has already voted
   - [x] Should emit an event on setVote
 
