@@ -218,6 +218,24 @@ contract("Voting", accounts => {
                 await expectRevert(VotingInstance.setVote(_proposal2Id, {from: _voter2}),"You have already voted");
             });
 
+            it("Check the voter.hasVoted is true", async () => {
+                await VotingInstance.setVote(_proposal1Id, {from: _voter2});
+                let voter2 = await VotingInstance.getVoter(_voter2,{from: _voter1});
+                expect(voter2.hasVoted).to.be.true;
+            });
+
+            it("Check the vote is well registered", async () => {
+                await VotingInstance.setVote(_proposal1Id, {from: _voter2});
+                let voter2 = await VotingInstance.getVoter(_voter2,{from: _voter2});
+                expect(new BN(voter2.votedProposalId)).to.deep.equal(_proposal1Id);
+            });
+
+            it("Check the proposal receive the vote", async () => {
+                await VotingInstance.setVote(_proposal1Id, {from: _voter2});
+                let proposal1 = await VotingInstance.getOneProposal(_proposal1Id,{from: _voter2});
+                expect(new BN(proposal1.voteCount)).to.deep.equal(BN(1));
+            });
+
             it("Should emit an event on setVote", async () => {
                 expectEvent( await VotingInstance.setVote(_proposal1Id, {from: _voter2}),"Voted",{voter:_voter2,proposalId:_proposal1Id});
             });
