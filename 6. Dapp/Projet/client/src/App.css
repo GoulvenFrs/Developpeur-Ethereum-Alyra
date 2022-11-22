@@ -1,0 +1,363 @@
+#App {
+  display: flex;
+}
+
+#App .container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+
+
+.backgroundImage{
+  -o-object-fit: cover;
+  object-fit: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  opacity: 1;
+}
+
+.Account{
+  text-align: center;
+  z-index: 1;
+  position: absolute;
+  background: var(--color4);
+  color: var(--color2) ;
+  border-radius: 20px;
+  border: 0;
+  top:0;
+  right: 0;
+  margin-top:2%;
+  margin-right:2%;
+  padding: 0.5rem 0.5rem;
+  border-style: solid;
+  border-width: 0.3rem;
+  border-color: var(--color2) ;
+}
+
+.Container{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  text-align: center;
+}
+
+
+/* Registration */
+
+.ListInput{
+  border-radius: 0.3rem;
+  border: 0;
+  padding:1px;
+  max-width: -webkit-fill-available;
+  margin-bottom: 3%;
+}
+.Register{
+  background: var(--color4);
+  border-radius: 20px;
+  border: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:12%;
+  border-style: solid;
+  border-width: 0.3rem;
+  border-color: var(--color2) ;
+}
+
+.RegisterTitle1{
+  color: var(--color2) ;
+  font-size: 2rem;
+  font-weight: bolder;
+  padding-top: 5%;
+}
+
+.RegisterTitle2{
+  color: var(--color2) ;
+  font-size: 1rem;
+  margin:2%;
+}
+
+
+.RegisterButton{
+  background: var(--color9);
+  color: var(--color2) ;
+  padding: 0.8rem 0.8rem;
+  border-radius: 20px;
+  border: 0;
+  cursor: pointer;
+  font-family:var(--font1);
+  font-size: 1rem;
+  font-weight: bolder;
+  transition:  0.5s;
+  margin:2%;
+}
+
+.RegisterButton:hover{
+  transform: scale(1.1, 1.1);
+}
+
+/* Proposals */
+
+.Proposal{
+  margin-left: auto;
+  margin-right: auto;
+  background: var(--color4);
+  border-radius: 20px;
+  padding:1%;
+  margin-top: 12%;
+  border-style: solid;
+  border-width: 0.3rem;
+  border-color: var(--color2) ;
+}
+
+.ProposalTitle{
+  color: var(--color2) ;
+  font-size: 1.1rem;
+  font-weight: bolder;
+}
+
+.ProposalInput{
+  border-radius: 0.3rem;
+  border: 0;
+  padding:1px;
+  max-width: -webkit-fill-available;
+  margin-bottom: 3%;
+}
+
+.LabelInput{
+  color: var(--color2) ;
+  font-size: 1rem;
+}
+
+.Friend{
+  display: flex;
+  flex-direction: row;
+}
+
+.Form{
+  margin:auto;
+}
+
+.ChoiceButton{
+  background: var(--color6);
+  color: var(--color2);
+  padding: 0.5rem 0.5rem;
+  border-radius: 20px;
+  border: 0;
+  cursor: pointer;
+  font-family: var(--font1);
+  font-size: 1rem;
+  font-weight: bolder;
+  transition: 0.5s;
+  margin: 2%;
+}
+
+.ChoiceButton:hover{
+  transform: scale(1.1, 1.1);
+}
+
+.CardContainer{
+  margin-left:auto;
+  margin-right:auto;
+  width: 70%;
+  margin-top: 2%;
+  display: grid;
+  overflow-x: hidden;
+  grid-template-columns: auto auto auto;
+  -ms-overflow-style: none;  
+  scrollbar-width: none;  
+  overflow:visible;
+}
+
+.CardContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.Card{
+  background-color: var(--color4);
+  margin: 3%;
+  border-radius: 15px;
+  transition: 0.5s;
+  height: fit-content;
+}
+.Card:hover{
+  transform: scale(1.01, 1.01);
+}
+
+.CardIndex{
+  position: fixed;
+  color: var(--color2);
+  background-color: var(--color6);
+  border-radius: 1rem;
+  margin-left: -0.75rem;
+  margin-top: -0.75rem;
+  inline-size: 1.4rem;
+}
+
+.CardCount{
+  position: fixed;
+  color: var(--color2);
+  background-color: var(--color6);
+  border-radius: 1rem;
+  margin-left: -0.75rem;
+  margin-top: -0.75rem;
+  padding-left: 0.5rem;
+  padding-right:0.5rem;
+}
+
+.CardText{
+  color: var(--color2) ;
+  font-size: 1rem;
+}
+
+.BeforeVote{
+  color: var(--color2) ;
+  font-size: 1.1rem;
+  font-weight: bolder;
+  background-color: var(--color4);
+  margin-top: 12%;
+  width: fit-content;
+  margin-left:auto;
+  margin-right:auto;
+  padding: 2%;
+  border-radius: 15px;
+  border-style: solid;
+  border-width: 0.3rem;
+  border-color: var(--color2) ;
+}
+
+.Footer{
+  position: absolute;
+  bottom: 3%;
+  left: 2%;
+  color: var(--color2) ;
+  font-size: 0.9rem;
+  font-weight: bolder;
+  background-color: var(--color4);
+  padding: 1rem;
+  border-radius: 15px;
+  line-height: 0%;
+  width: fit-content;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: solid;
+  border-width: 0.3rem;
+  border-color: var(--color2) ;
+}
+
+.FooterText{
+  text-align: center;
+}
+
+/* Popup style */
+
+.popup-box {
+  position: fixed;
+  background: #00000050;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+ 
+.box1 {
+  position: relative;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 40vh;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  background: rgb(211, 71, 71);
+}
+.box2 {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 40vh;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  background: rgb(102, 171, 87);
+}
+ 
+.close-icon {
+  content: 'x';
+  position: absolute;
+  right: -1.5%;
+  top: -6%;
+  background: #ededed;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  line-height: 20px;
+  border: 1px solid #999;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.close-icon:hover{
+  transform: scale(1.1, 1.1);
+}
+
+.popupTitle1{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.popupTitle2{
+  font-size: 0.75rem;
+}
+
+.popupError{
+  overflow:hidden;
+}
+
+
+/* Admin */
+
+
+.AdminMenu{
+  margin-top:2%;
+  margin-left:2%;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  z-index: 1;
+  position: absolute;
+  background: var(--color4);
+  color: var(--color2) ;
+  border-radius: 20px;
+  border-style: solid;
+  border-width: 0.3rem;
+  border-color: var(--color2) ;
+  font-size: 1.1rem;
+  font-weight: bolder;
+  width: 15%;
+}
+
+.AdminButton{
+  background: var(--color6);
+  color: var(--color2) ;
+  padding: 0.5rem 0.5rem;
+  border-radius: 20px;
+  border: 0;
+  cursor: pointer;
+  font-family:var(--font1);
+  font-size: 1rem;
+  font-weight: bolder;
+  transition:  0.5s;
+  margin: 5%;
+}
+
+.AdminButton:hover{
+  transform: scale(1.05, 1.05);
+}
