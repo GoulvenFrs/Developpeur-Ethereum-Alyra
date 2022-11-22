@@ -13,7 +13,8 @@ First setup the truffle environment to deploy the contract :
 
 ```bash
 cd truffle
-npm install
+npm install dotenv @truffle/hdwalletprovider
+# you can configure a .env with MNEMONIC and INFURA_PROJECT_ID
 truffle migrate --network goerli
 ```
 
