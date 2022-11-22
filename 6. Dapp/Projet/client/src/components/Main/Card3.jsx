@@ -7,7 +7,7 @@ function Card3({ contract, accounts}) {
 
   async function checkVote(_addr) {
     const value = await contract.methods.getVote(_addr).call({ from: accounts[0] });
-    setResultFriend(value);
+    setResultFriend(value.description);
   }
 
   return (
