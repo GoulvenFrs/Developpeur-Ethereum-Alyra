@@ -1,40 +1,42 @@
-# React Truffle Box
+# DApp Voting System 
 
-This box comes with everything you need to start using Truffle to write, compile, test, and deploy smart contracts, and interact with them from a React app.
+## Setup
 
-## Installation
+Download the project workspace on your local machine.
 
-First ensure you are in an empty directory.
-
-Run the `unbox` command using 1 of 2 ways.
-
-```sh
-# Install Truffle globally and run `truffle unbox`
-$ npm install -g truffle
-$ truffle unbox react
+```bash
+git clone https://github.com/GoulvenPablo/Developpeur-Ethereum-Alyra.git
+cd Developpeur-Ethereum-Template/6.\ Dapp/Projet
 ```
 
-```sh
-# Alternatively, run `truffle unbox` via npx
-$ npx truffle unbox react
+First setup the truffle environment to deploy the contract :
+
+```bash
+cd truffle
+npm install dotenv @truffle/hdwalletprovider
+# you can configure a .env with MNEMONIC and INFURA_PROJECT_ID
+truffle migrate --network goerli
 ```
 
-Start the react dev server.
+Then setup the client to use the Dapp :
 
-```sh
-$ cd client
-$ npm start
-  Starting the development server...
+```bash
+# cd .. 
+cd client
+npm install
+npm start 
 ```
 
-From there, follow the instructions on the hosted React app. It will walk you through using Truffle and Ganache to deploy the `SimpleStorage` contract, making calls to it, and sending transactions to change the contract's state.
+Once the smart contract is deployed, you'll need to add the owner public address into the Dapp :
 
-## FAQ
+```bash
+cd client/src/components/Main/Container.jsx
+```
 
-- __How do I use this with Ganache (or any other network)?__
+```JS
+# line 20 :
+const owner ="0x"
+```
+## Deployed app 
 
-  The Truffle project is set to deploy to Ganache by default. If you'd like to change this, it's as easy as modifying the Truffle config file! Check out [our documentation on adding network configurations](https://trufflesuite.com/docs/truffle/reference/configuration/#networks). From there, you can run `truffle migrate` pointed to another network, restart the React dev server, and see the change take place.
-
-- __Where can I find more resources?__
-
-  This Box is a sweet combo of [Truffle](https://trufflesuite.com) and [Create React App](https://create-react-app.dev). Either one would be a great place to start!
+The deployed App is here : https://dappvoting-mk3pz8kz3-goulvenpablo.vercel.app/
