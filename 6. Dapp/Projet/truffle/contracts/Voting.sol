@@ -11,7 +11,7 @@ contract Voting is Ownable{
         uint256 votedProposalId;
     }
 
-    mapping(address=> Voter) public whiteList; // mapping des voters
+    mapping(address=> Voter) whiteList; // mapping des voters
 
     struct Proposal {
         string description;
