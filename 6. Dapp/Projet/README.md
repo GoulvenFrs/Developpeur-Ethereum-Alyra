@@ -18,25 +18,29 @@ npm install dotenv @truffle/hdwalletprovider
 truffle migrate --network goerli
 ```
 
-Then setup the client to use the Dapp :
 
-```bash
-# cd .. 
-cd client
-npm install
-npm start 
-```
 
 Once the smart contract is deployed, you'll need to add the owner public address into the Dapp :
 
 ```bash
-cd client/src/components/Main/Container.jsx
+# cd .. 
+cd client
 ```
 
+Create a file .env at the root :
+
 ```JS
-# line 20 :
-const owner ="0x"
+REACT_APP_OWNER =0x...
 ```
+
+Then setup the client to use the Dapp :
+
+```bash
+npm install
+npm start 
+```
+
+
 ## Deployed app 
 
 The deployed App is here : https://dappvoting-mk3pz8kz3-goulvenpablo.vercel.app/

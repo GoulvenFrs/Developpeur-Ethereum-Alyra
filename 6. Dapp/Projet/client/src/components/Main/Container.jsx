@@ -17,7 +17,7 @@ function Container({ status, setStatus }) {
   const [winningList, setWinningList] = useState('');
 
   require('dotenv').config();
-  const owner = "0x" /* process.env.REACT_APP_OWNER */ ;
+  const owner = process.env.REACT_APP_OWNER ;
 
   const {
     state: { contract, accounts },
